@@ -7,24 +7,39 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">MyWebsite</div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <h1>Create Account</h1>
         <form class="form">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
             </div>
             <div class="form-group">
                 <label for="birthday">Birthday:</label>
@@ -41,17 +56,25 @@
             </div>
             <div class="form-group">
                 <label for="interests">Interests:</label>
-                <input type="text" id="interests" name="interests" placeholder="e.g., Reading, Sports">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="interests" value="mahjong"> 打麻將</label>
+                    <label><input type="checkbox" name="interests" value="poker"> 打撲克</label>
+                    <label><input type="checkbox" name="interests" value="watching-shows"> 看劇</label>
+                    <label><input type="checkbox" name="interests" value="crypto"> 買虛幣</label>
+                </div>
             </div>
             <div class="form-group">
                 <label for="bio">Bio:</label>
                 <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
             </div>
             <div class="form-actions">
-                <button type="submit" class="submit-btn">Sign Up</button>
                 <button type="button" class="login-btn">Log In</button>
+                <button type="submit" class="submit-btn">Sign Up</button>
             </div>
         </form>
     </div>
+    <footer class="footer">
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
 </body>
 </html>

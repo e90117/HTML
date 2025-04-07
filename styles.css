@@ -2,26 +2,65 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+   
+    background-size: cover;
+    color: #f4f4f9;
+}
+
+.header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
+    justify-content: space-between; /* 左右對齊 */
+    align-items: center; /* 垂直置中 */
+    height: 50px; /* 高度設為 50px */
+    padding: 0 20px; /* 左右內邊距 */
+    background-color: #2a2a40; /* 深色背景 */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: #f4f4f9;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ffcc00;
 }
 
 .container {
-    background: #fff;
+    background: #2a2a40; /* 深色容器背景 */
     padding: 20px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 400px;
+    margin: 60px auto 0; /* 距離 header 120px，左右置中 */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffcc00; /* 突出標題顏色 */
 }
 
 .form {
@@ -38,14 +77,18 @@ h1 {
 label {
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+    color: #f4f4f9;
 }
 
 input, select, textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 4px;
     font-size: 16px;
+    background-color: #1e1e2f; /* 深色輸入框背景 */
+    color: #f4f4f9;
+    width: 100%; /* 確保輸入框填滿父容器 */
+    box-sizing: border-box; /* 包含內邊距與邊框 */
 }
 
 textarea {
@@ -53,8 +96,22 @@ textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #007BFF;
+    border-color: #ffcc00; /* 聚焦時的亮色邊框 */
     outline: none;
+}
+
+.form-group-row {
+    display: flex;
+    justify-content: space-between; /* 左右分佈 */
+    gap: 15px; /* 欄位間距 */
+}
+
+.form-group-row .form-group {
+    flex: 1; /* 平均分配寬度 */
+}
+
+.form-group-row .form-group:first-child {
+    margin-right: 15px; /* 第一個欄位右側間距 */
 }
 
 .form-actions {
@@ -73,19 +130,44 @@ button {
 }
 
 .submit-btn {
-    background-color: #007BFF;
-    color: white;
+    background-color: #3a3a5f; /* 深色按鈕背景 */
+    color: #f4f4f9;
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #4a4a7f; /* 按鈕 hover 效果 */
 }
 
 .login-btn {
-    background-color: #6c757d;
-    color: white;
+    background-color: #555;
+    color: #f4f4f9;
 }
 
 .login-btn:hover {
-    background-color: #5a6268;
+    background-color: #666;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2a2a40; /* 深色 footer */
+    color: #f4f4f9;
+    margin-top: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* 垂直排列複選框 */
+    gap: 10px; /* 每個選項之間的間距 */
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #f4f4f9;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px; /* 複選框與文字之間的間距 */
 }
