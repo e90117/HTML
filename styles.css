@@ -1,27 +1,26 @@
+/* Apple 官網風格調整 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
-
-   
-    background-size: cover;
-    color: #f4f4f9;
+    background-color: #f5f5f7; /* Apple 官網常用的淺灰背景 */
+    color: #1d1d1f; /* 深灰文字顏色 */
 }
 
 .header {
     display: flex;
-    justify-content: space-between; /* 左右對齊 */
-    align-items: center; /* 垂直置中 */
-    height: 50px; /* 高度設為 50px */
-    padding: 0 20px; /* 左右內邊距 */
-    background-color: #2a2a40; /* 深色背景 */
-    color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #ffffff; /* 白色背景 */
+    color: #1d1d1f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .nav {
@@ -31,42 +30,45 @@ body {
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
 .nav-list li a {
-    color: #f4f4f9;
+    color: #1d1d1f;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-list li a:hover {
-    color: #ffcc00;
+    color: #0071e3; /* Apple 藍色 */
 }
 
 .container {
-    background: #2a2a40; /* 深色容器背景 */
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: #ffffff; /* 白色容器背景 */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 柔和陰影 */
     width: 100%;
-    max-width: 400px;
-    margin: 60px auto 0; /* 距離 header 120px，左右置中 */
+    max-width: 500px;
+    margin: 120px auto 0; /* 距離 header 120px，左右置中 */
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #ffcc00; /* 突出標題顏色 */
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d1d1f;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .form-group {
@@ -75,20 +77,21 @@ h1 {
 }
 
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #f4f4f9;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #6e6e73; /* Apple 官網常用的次要文字顏色 */
 }
 
 input, select, textarea {
-    padding: 10px;
-    border: 1px solid #555;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
     font-size: 16px;
-    background-color: #1e1e2f; /* 深色輸入框背景 */
-    color: #f4f4f9;
-    width: 100%; /* 確保輸入框填滿父容器 */
-    box-sizing: border-box; /* 包含內邊距與邊框 */
+    background-color: #f9f9fa;
+    color: #1d1d1f;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
 textarea {
@@ -96,78 +99,50 @@ textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #ffcc00; /* 聚焦時的亮色邊框 */
+    border-color: #0071e3; /* Apple 藍色 */
     outline: none;
-}
-
-.form-group-row {
-    display: flex;
-    justify-content: space-between; /* 左右分佈 */
-    gap: 15px; /* 欄位間距 */
-}
-
-.form-group-row .form-group {
-    flex: 1; /* 平均分配寬度 */
-}
-
-.form-group-row .form-group:first-child {
-    margin-right: 15px; /* 第一個欄位右側間距 */
 }
 
 .form-actions {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 }
 
 button {
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .submit-btn {
-    background-color: #3a3a5f; /* 深色按鈕背景 */
-    color: #f4f4f9;
+    background-color: #0071e3; /* Apple 藍色 */
+    color: #ffffff;
 }
 
 .submit-btn:hover {
-    background-color: #4a4a7f; /* 按鈕 hover 效果 */
+    background-color: #005bb5; /* 深藍色 hover 效果 */
 }
 
 .login-btn {
-    background-color: #555;
-    color: #f4f4f9;
+    background-color: #f5f5f7; /* Apple 淺灰背景 */
+    color: #0071e3;
+    border: 1px solid #d2d2d7;
 }
 
 .login-btn:hover {
-    background-color: #666;
+    background-color: #e5e5e7; /* 更深的灰色 hover 效果 */
 }
 
 .footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #2a2a40; /* 深色 footer */
-    color: #f4f4f9;
-    margin-top: 20px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.checkbox-group {
-    display: flex;
-    flex-direction: column; /* 垂直排列複選框 */
-    gap: 10px; /* 每個選項之間的間距 */
-}
-
-.checkbox-group label {
+    padding: 20px 0;
+    background-color: #f5f5f7;
+    color: #6e6e73;
+    margin-top: 40px;
     font-size: 14px;
-    color: #f4f4f9;
-    cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin-right: 8px; /* 複選框與文字之間的間距 */
 }
