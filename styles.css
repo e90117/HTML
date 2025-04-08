@@ -1,12 +1,18 @@
-/* Apple 官網風格調整 */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+/* 全局樣式 */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f7; /* Apple 官網常用的淺灰背景 */
+    height: 100vh;
+    background: #0a0a0a; /* 可依需要調整背景色 */
+    overflow: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #1d1d1f; /* 深灰文字顏色 */
 }
 
+/* Header 樣式 */
 .header {
     display: flex;
     justify-content: space-between;
@@ -47,6 +53,51 @@ body {
     color: #0071e3; /* Apple 藍色 */
 }
 
+/* 背景動畫 */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 讓它在畫面最底層 */
+    pointer-events: none; /* 不影響點擊操作 */
+}
+
+.glow1 {
+    background: radial-gradient(circle, rgba(255, 200, 255, 0.4), transparent 70%);
+    animation: float1 30s ease-in-out infinite;
+  }
+  
+  .glow2 {
+    background: radial-gradient(circle, rgba(200, 255, 255, 0.3), transparent 70%);
+    animation: float2 40s ease-in-out infinite;
+    top: 60%;
+    left: 30%;
+  }
+  
+  .glow3 {
+    background: radial-gradient(circle, rgba(255, 255, 200, 0.3), transparent 70%);
+    animation: float3 50s ease-in-out infinite;
+    top: 40%;
+    left: 70%;
+  }
+  
+
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateX(0) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(50px) translateY(-40px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(0) translateY(0);
+    }
+}
+
+/* Container 樣式 */
 .container {
     background: #ffffff; /* 白色容器背景 */
     padding: 40px 30px;
@@ -65,6 +116,7 @@ h1 {
     color: #1d1d1f;
 }
 
+/* 表單樣式 */
 .form {
     display: flex;
     flex-direction: column;
@@ -74,6 +126,16 @@ h1 {
 .form-group {
     display: flex;
     flex-direction: column;
+}
+
+.form-group-row {
+    display: flex;
+    justify-content: space-between; /* 左右分佈 */
+    gap: 20px; /* 欄位間距 */
+}
+
+.form-group-row .form-group {
+    flex: 1; /* 平均分配寬度 */
 }
 
 label {
@@ -103,10 +165,31 @@ input:focus, select:focus, textarea:focus {
     outline: none;
 }
 
+/* Interests 複選框樣式 */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* 如果空間不足，允許換行 */
+    gap: 15px; /* 選項間距 */
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #1d1d1f;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    width: calc(50% - 7.5px); /* 每行兩個項目，減去 gap 的一半 */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 2px; /* 縮小複選框與文字之間的間距 */
+}
+
+/* 按鈕樣式 */
 .form-actions {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 button {
@@ -138,6 +221,7 @@ button {
     background-color: #e5e5e7; /* 更深的灰色 hover 效果 */
 }
 
+/* Footer 樣式 */
 .footer {
     text-align: center;
     padding: 20px 0;
